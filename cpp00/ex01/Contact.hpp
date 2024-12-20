@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 08:16:34 by ktieu             #+#    #+#             */
-/*   Updated: 2024/12/20 08:21:46 by ktieu            ###   ########.fr       */
+/*   Updated: 2024/12/20 11:34:13 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define CONTACT_HPP
 
 #include <string>
+#include <iostream>
+#include <iomanip>
 
 class Contact
 {
@@ -33,7 +35,7 @@ class Contact
 				std::string	phone_number,
 				std::string	secret);
 		void display_short();
-		void display_long();
+		void display();
 };
 
 #endif
