@@ -6,11 +6,11 @@
 #    By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/20 08:00:21 by ktieu             #+#    #+#              #
-#    Updated: 2024/12/20 12:39:26 by ktieu            ###   ########.fr        #
+#    Updated: 2024/12/26 08:07:06 by ktieu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=The_Job_Of_Your_Dreams
+NAME=Account
 
 all:$(NAME)
 
