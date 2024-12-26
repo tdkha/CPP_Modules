@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 13:44:52 by ktieu             #+#    #+#             */
-/*   Updated: 2024/12/26 15:23:24 by ktieu            ###   ########.fr       */
+/*   Updated: 2024/12/26 16:34:38 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Zombie::Zombie()
 Zombie::Zombie(std::string name)
 {
 	if (name.empty())
-		Zombie();
+		 _name = "Undefined";
 	else
 		_name = name;
 }

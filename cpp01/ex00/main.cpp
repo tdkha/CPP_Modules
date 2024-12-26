@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 15:25:53 by ktieu             #+#    #+#             */
-/*   Updated: 2024/12/26 15:35:12 by ktieu            ###   ########.fr       */
+/*   Updated: 2024/12/26 16:34:59 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	zomebie_in_stack()
 {
-	randomChump("StackZombie");
+	randomChump("ZombieInStack");
 }
 
 Zombie	*zomebie_in_heap()
