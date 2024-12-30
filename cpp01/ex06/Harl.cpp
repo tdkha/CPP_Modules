@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 20:56:18 by ktieu             #+#    #+#             */
-/*   Updated: 2024/12/26 21:26:38 by ktieu            ###   ########.fr       */
+/*   Updated: 2024/12/30 21:21:38 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,25 @@ void	Harl::_error(void)
 
 void	Harl::complain(std::string level)
 {
-	if (!level.compare("DEBUG"))
-		_debug();
-	else if (!level.compare("INFO"))
-		_info();
-	else if (!level.compare("WARNING"))
-		_warning();
-	else if (!level.compare("ERROR"))
-		_error();
+	std::string levels[4] = {
+		"DEBUG",
+		"INFO",
+		"WARNING",
+		"ERROR"
+	};
+
+	void (Harl::*functions[4])() = {
+		&Harl::_debug,
+		&Harl::_info,
+		&Harl::_warning,
+		&Harl::_error,
+	};
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (level == levels[i])
+		{
+			(this->*functions[i])();
+		}
+	}
 }
