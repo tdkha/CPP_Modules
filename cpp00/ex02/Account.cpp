@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 12:36:10 by ktieu             #+#    #+#             */
-/*   Updated: 2024/12/26 08:04:15 by ktieu            ###   ########.fr       */
+/*   Updated: 2024/12/30 15:19:29 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ void	Account::makeDeposit( int deposit )
 
 bool	Account::makeWithdrawal( int withdrawal )
 {
+	_displayTimestamp();
 	if (withdrawal > _amount)
 	{
 		std::cout	<< "index:"		<< _accountIndex
