@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 18:49:49 by ktieu             #+#    #+#             */
-/*   Updated: 2025/01/01 00:59:43 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/01/01 01:07:58 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,35 @@ Fixed::Fixed(const Fixed &fixed)
 	std::cout << "Copy constructor called" << std::endl;
 	*this = fixed;
 }
+
+Fixed::Fixed(const int value)
+{
+	std::cout << "Int constructor called" << std::endl;
+	_value = (value << _fraction_bits);
+}
+
+/**
+ * Description: The bit shifting for float is slightly different but the idea is the same
+ * as we shift <N> bits to the left (multiply it by 2 by N times) 
+ * 
+ * Asssume _fraction_bits = 8
+ * =>	OK		:	(integer << 8) = integer * (1 << 8)
+ * =>	OK		:	float_value * (1 << 8)
+ * =>	KO		:	float_value << 8	
+ * =>	Equation:	round(value * (1 << _fraction_bits))
+ */
+Fixed::Fixed(const float value)
+{
+	std::cout << "Float constructor called" << std::endl;
+	_value = (int)roundf(value * (1 << _fraction_bits));
+}
+
 Fixed &Fixed::operator=(const Fixed &fixed )
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &fixed)
 	{
-		this->_value = fixed.getRawBits();
+		_value = fixed.getRawBits();
 	}
 	return *this;
 }
@@ -47,4 +70,20 @@ void Fixed::setRawBits( int const raw )
 {
 	std::cout << "setRawBits member function called" << std::endl;
 	_value = raw;
+}
+
+float Fixed::toFloat(void) const
+{
+	return _value / (float)(1 << _fraction_bits);
+}
+
+int Fixed::toInt() const
+{
+	return _value >> _fraction_bits;
+}
+
+std::ostream &operator << (std::ostream &os, const Fixed &fixed)
+{
+	os << fixed.toFloat();
+	return os;
 }
