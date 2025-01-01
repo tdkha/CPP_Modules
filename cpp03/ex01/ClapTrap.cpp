@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/01 23:01:27 by ktieu             #+#    #+#             */
-/*   Updated: 2025/01/02 01:13:46 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/01/02 01:28:33 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hit_pts(10), _energy_pts(10
 	_hit_pts_org = _hit_pts;
 }
 
+ClapTrap::ClapTrap(const std::string &name, unsigned int hp, unsigned int ep, unsigned int ad)
+	: _name(name), _hit_pts(hp), _hit_pts_org(hp), _energy_pts(ep), _attack_dmg(ad)
+{
+	std::cout << "ClapTrap parameterized constructor called" << std::endl;
+}
+
 ClapTrap::ClapTrap(const ClapTrap &claptrap)
 	:	_name(claptrap._name),
 		_hit_pts(claptrap._hit_pts),
@@ -38,6 +44,7 @@ ClapTrap::ClapTrap(const ClapTrap &claptrap)
 	std::cout << "ClapTrap copy constructor called" << std::endl;
 	_hit_pts_org = claptrap._hit_pts;
 }
+
 
 ClapTrap &ClapTrap::operator = (const ClapTrap &claptrap)
 {
@@ -52,20 +59,10 @@ ClapTrap &ClapTrap::operator = (const ClapTrap &claptrap)
 	return (*this);
 }
 
-unsigned int	ClapTrap::getHitPts() const 
-{
-	return _hit_pts;
-}
-
-unsigned int	ClapTrap::getAttackDmg() const
-{
-	return _attack_dmg;	
-}
-
-std::string	ClapTrap::getName() const
-{
-	return _name;	
-}
+unsigned int ClapTrap::getHitPts() const 	{ return _hit_pts; }
+unsigned int ClapTrap::getEnergyPts() const { return _energy_pts; }
+unsigned int ClapTrap::getAttackDmg() const	{ return _attack_dmg; }
+std::string	ClapTrap::getName() const 		{ return _name; }
 
 
 void ClapTrap::attack(const std::string& target)
