@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 18:49:35 by ktieu             #+#    #+#             */
-/*   Updated: 2025/01/01 19:42:08 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/01/01 19:51:00 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void test(float x1, float y1,
 	Point c(x3, y3);
 	Point p(px, py);
 
-	std::cout << (bsp(a, b, c, p) ? "True" : "False") << std::endl;
+	std::cout << (bsp(a, b, c, p) ? "OK" : "KO") << std::endl;
 }
 
 int main(void)
