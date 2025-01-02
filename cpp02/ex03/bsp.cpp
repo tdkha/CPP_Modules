@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/01 17:25:59 by ktieu             #+#    #+#             */
-/*   Updated: 2025/01/01 19:43:44 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/01/02 15:00:37 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ bool bsp( Point const p1, Point const p2, Point const p3, Point const point)
 
 	bool has_neg = (d1 < 0) || (d2 < 0) || (d3 < 0);
 	bool has_pos = (d1 > 0) || (d2 > 0) || (d3 > 0);
+	bool same_sign = !(has_neg && has_pos);
+	bool on_edges = (d1 == 0) || (d2 == 0) || (d3 == 0);
 
-	return !(has_neg && has_pos);
+	return (same_sign && !on_edges);
 }
