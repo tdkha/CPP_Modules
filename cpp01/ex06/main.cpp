@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 21:00:03 by ktieu             #+#    #+#             */
-/*   Updated: 2024/12/30 21:12:06 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/01/02 14:42:16 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ int	main(int ac, char **av)
 	for (int i = 0; i < 4; i++)
 	{
 		if (av[1] == levels[i])
+		{
 			valid_choice = i;
+			break;
+		}
 	}
 	int ok = (valid_choice != -1) ? 1 : 0;
 	switch (ok)
 	{
-		case 0:
-			std::cout << "Invalid level." << std::endl;
-			return 1;
 		case 1:
 			while (valid_choice < 4)
 			{
@@ -41,6 +41,7 @@ int	main(int ac, char **av)
 				harl.complain(levels[valid_choice++]);
 				std::cout << "\n";
 			}
+			break;
 		default:
 			std::cout << "Invalid level." << std::endl;
 			return 1;
