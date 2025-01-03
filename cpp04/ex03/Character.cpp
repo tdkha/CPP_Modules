@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 14:15:15 by ktieu             #+#    #+#             */
-/*   Updated: 2025/01/03 14:29:51 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/01/03 19:51:54 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,18 @@ Character::~Character()
 {
 	for (int i = 0; i < 4; i++)
 		delete _inventory[i];
+}
+
+Character &Character::operator = (const Character &character)
+{
+	if (this != &character)
+	{
+		for (int i = 0; i < 4; i++)
+			_inventory[i] = (character._inventory[i])
+				? character._inventory[i]->clone()
+				: 0;
+	}
+	return *this;
 }
 
 std::string	const &Character::getName() const
@@ -66,7 +78,7 @@ void Character::use(int index, ICharacter	&target)
 		_inventory[index]->use(target);
 }
 
-AMateria *Character::getMateriaInventory(int index)
+AMateria *Character::getInventory(int index)
 {
 	if (index >= 0 && index < 4)
 		return _inventory[index];

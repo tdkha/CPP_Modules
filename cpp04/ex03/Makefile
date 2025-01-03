@@ -6,11 +6,11 @@
 #    By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/03 14:03:25 by ktieu             #+#    #+#              #
-#    Updated: 2025/01/03 14:03:35 by ktieu            ###   ########.fr        #
+#    Updated: 2025/01/03 19:46:40 by ktieu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=interface
+NAME=interface_and_abstract
 
 all: $(NAME)
 
