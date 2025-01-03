@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 13:04:56 by ktieu             #+#    #+#             */
-/*   Updated: 2025/01/03 13:52:06 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/01/03 13:59:59 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,12 @@ int main(void)
 
 	std::cout << "-----------------------------" << std::endl;
 
-	const Animal* animal = new Animal();
 	const Animal* dog = new Dog("Husky");
 	const Animal* cat = new Cat("British Shorthair");
 	
 	dog->makeSound();
 	cat->makeSound();
-	animal->makeSound();
 
-	delete animal;
 	delete dog;
 	delete cat;
 

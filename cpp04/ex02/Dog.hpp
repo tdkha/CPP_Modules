@@ -1,0 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/03 01:17:09 by ktieu             #+#    #+#             */
+/*   Updated: 2025/01/03 13:43:12 by ktieu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#pragma once
+
+#include "Animal.hpp"
+#include "Brain.hpp"
+
+class Dog: public Animal
+{
+	private:
+		Brain *_brain;
+	public:
+		Dog();
+		Dog(const std::string &type);
+		Dog(const Dog &dog);
+		~Dog();
+
+		Dog &operator = (const Dog &dog);
+
+		void makeSound() const;
+};
