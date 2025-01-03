@@ -6,11 +6,11 @@
 #    By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/01 22:56:20 by ktieu             #+#    #+#              #
-#    Updated: 2025/01/02 13:23:16 by ktieu            ###   ########.fr        #
+#    Updated: 2025/01/03 18:04:33 by ktieu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=FragTrap
+NAME=DiamondTrap
 
 all: $(NAME)
 

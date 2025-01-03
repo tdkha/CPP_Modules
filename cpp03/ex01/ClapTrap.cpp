@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/01 23:01:27 by ktieu             #+#    #+#             */
-/*   Updated: 2025/01/02 11:58:11 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/01/03 18:03:18 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ ClapTrap::ClapTrap(const ClapTrap &claptrap)
 		_attack_dmg(claptrap._attack_dmg)
 {
 	std::cout << "ClapTrap copy constructor called" << std::endl;
-	_hit_pts_org = claptrap._hit_pts;
+	_hit_pts_org = claptrap._hit_pts_org;
 }
 
 
