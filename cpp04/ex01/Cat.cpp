@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 01:05:34 by ktieu             #+#    #+#             */
-/*   Updated: 2025/01/03 13:46:02 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/01/07 17:14:46 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ Cat &Cat::operator = (const Cat &cat)
 	if (this != &cat)
 	{
 		Animal::operator=(cat);
+		*_brain = *(cat._brain);
 	}
 	return *this;
 }

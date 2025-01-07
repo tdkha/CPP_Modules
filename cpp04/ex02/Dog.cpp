@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 01:17:33 by ktieu             #+#    #+#             */
-/*   Updated: 2025/01/03 13:46:46 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/01/07 17:15:24 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ Dog &Dog::operator = (const Dog &dog)
 	if (this != &dog)
 	{
 		Animal::operator=(dog);
+		*_brain = *(dog._brain);
 	}
 	return *this;
 }

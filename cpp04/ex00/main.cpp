@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 13:04:56 by ktieu             #+#    #+#             */
-/*   Updated: 2025/01/03 13:59:59 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/01/07 15:25:44 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int main(void)
 
 	std::cout << "-----------------------------" << std::endl;
 
+	std::cout << "Parameterized constructor" << std::endl;
+
 	const Animal* dog = new Dog("Husky");
 	const Animal* cat = new Cat("British Shorthair");
 	
@@ -41,6 +43,7 @@ int main(void)
 	delete cat;
 
 	std::cout << "-----------------------------" << std::endl;
+	std::cout << "Wrong Animal constructor" << std::endl;
 
 	const WrongAnimal* wrongAnimal1 = new WrongAnimal();
 	const WrongAnimal* wrongAnimal2 = new WrongCat("Tiger");
