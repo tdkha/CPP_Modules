@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 12:21:10 by ktieu             #+#    #+#             */
-/*   Updated: 2025/02/28 14:03:36 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/04 11:20:03 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,22 @@ class Bureaucrat
 
 		int getGrade() const;
 		const std::string &getName() const;
+
+		void increment();
+		void decrement();
 		
 		class GradeTooHighException;
 		class GradeTooLowException;
 };
 
-class Bureaucrat::GradeTooHighException: public std::exception
+std::ostream &operator << (std::ostream &os, const Bureaucrat & b);
+
+class Bureaucrat::GradeTooHighException : public std::exception
 {
-    const char *what() const throw();
+	const char *what() const throw();
 };
 
-class Bureaucrat::GradeTooLowException: public std::exception
+class Bureaucrat::GradeTooLowException : public std::exception
 {
-    const char *what() const throw();
+	const char *what() const throw();
 };
