@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 12:53:42 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/04 11:29:15 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/04 11:33:50 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,7 @@ void Bureaucrat::decrement()
 
 std::ostream &operator << (std::ostream &os, const Bureaucrat & b)
 {
-	os	<< "Name: " << b.getName()
-		<< ", Grade: " << b.getGrade();
+	os << b.getName() << ", bureaucrat grade " << b.getGrade() << ".";
 	return (os);
 }
 
