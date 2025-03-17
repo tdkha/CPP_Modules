@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 11:21:38 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/04 11:32:38 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/17 13:58:46 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	main(void)
 	Bureaucrat	b1_clone(b1);
 
 	std::cout << "--------------------------------" << std::endl;
-
+	std::cout << "Copy constructor"	<< std::endl;
+	std::cout << "--------------------------------" << std::endl;
 	try
 	{
 		std::cout << b1_clone << std::endl;
@@ -30,6 +31,8 @@ int	main(void)
 		std::cerr << e.what() << std::endl;
 	}
 	
+	std::cout << "--------------------------------" << std::endl;
+	std::cout << "Increment grade"	<< std::endl;
 	std::cout << "--------------------------------" << std::endl;
 
 	try
@@ -42,6 +45,8 @@ int	main(void)
 		std::cerr << e.what() << std::endl;
 	}
 
+	std::cout << "--------------------------------" << std::endl;
+	std::cout << "Decrement grade"	<< std::endl;
 	std::cout << "--------------------------------" << std::endl;
 
 	try

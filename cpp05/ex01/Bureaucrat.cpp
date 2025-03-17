@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 12:53:42 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/04 11:33:50 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/17 13:56:18 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,22 @@ void Bureaucrat::decrement()
 	this->_grade++;
 }
 
+void Bureaucrat::signForm(Form &form) const
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << _name << " signed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << _name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+	}
+}
+
 std::ostream &operator << (std::ostream &os, const Bureaucrat & b)
 {
-	os << b.getName() << ", bureaucrat grade " << b.getGrade() << ".";
+	os << b.getName() << ", bureaucrat grade " << b.getGrade() << "." << std::endl;
 	return (os);
 }
 

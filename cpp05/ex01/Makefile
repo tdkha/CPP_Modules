@@ -6,11 +6,11 @@
 #    By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/28 12:19:21 by ktieu             #+#    #+#              #
-#    Updated: 2025/03/04 11:36:16 by ktieu            ###   ########.fr        #
+#    Updated: 2025/03/17 14:14:43 by ktieu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=bureaucrat
+NAME=form
 
 all: $(NAME)
 

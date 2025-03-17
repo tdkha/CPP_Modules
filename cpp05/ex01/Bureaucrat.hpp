@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 12:21:10 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/04 11:20:03 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/17 14:13:23 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 #include <string>
 #include <iostream>
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -33,6 +36,8 @@ class Bureaucrat
 
 		void increment();
 		void decrement();
+
+		void signForm(Form &form) const;
 		
 		class GradeTooHighException;
 		class GradeTooLowException;

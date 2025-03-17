@@ -6,13 +6,15 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 11:36:28 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/04 15:50:10 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/17 14:13:16 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -29,5 +31,25 @@ class Form
 
 		Form &operator = (const Form &org);
 
+		const std::string &getName() const;
+		bool getSigned() const;
+		int getSignGrade() const;
+		int getExeGrade() const;
 		
+		void beSigned(const Bureaucrat &bureaucrat);
+
+		class GradeTooHighException;
+		class GradeTooLowException;
+};
+
+std::ostream &operator<<(std::ostream &os, const Form &form);
+
+class Form::GradeTooHighException : public std::exception
+{
+	const char *what() const throw();
+};
+
+class Form::GradeTooLowException : public std::exception
+{
+	const char *what() const throw();
 };
