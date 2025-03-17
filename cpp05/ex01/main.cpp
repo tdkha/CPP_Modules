@@ -6,11 +6,12 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 11:21:38 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/17 14:19:00 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/17 16:32:16 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 int	main(void)
 {	

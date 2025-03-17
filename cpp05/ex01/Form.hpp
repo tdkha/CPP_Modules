@@ -6,13 +6,13 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 11:36:28 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/17 14:13:16 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/17 14:57:15 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-
-#include "Bureaucrat.hpp"
+#include <string>
+#include <iostream>
 
 class Bureaucrat;
 

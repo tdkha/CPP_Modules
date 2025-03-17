@@ -6,11 +6,12 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 12:53:42 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/17 13:56:18 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/17 15:48:43 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(42){}
 
