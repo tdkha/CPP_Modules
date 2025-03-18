@@ -39,10 +39,10 @@ void ScalarConverter::_toChar(const std::string &str)
 			if (std::isprint(c))
 				std::cout << "char: '" << c << "'" << std::endl;
 			else
-				std::cout << "char: Not displayable" << std::endl;
+				std::cout << "char: Non displayable" << std::endl;
 		}
 		else
-			std::cout << "char: Impossible" << std::endl;
+			std::cout << "char: impossible" << std::endl;
 	}
 	catch (const std::exception &e)
 	{
@@ -53,7 +53,7 @@ void ScalarConverter::_toChar(const std::string &str)
 		}
 		else
 		{
-			std::cout << "char: Impossible" << std::endl;
+			std::cout << "char: impossible" << std::endl;
 		}
 	}
 }
@@ -74,7 +74,7 @@ void ScalarConverter::_toInt(const std::string &str)
 		}
 		catch (const std::exception &e)
 		{
-			std::cout << "int: Impossible" << std::endl;
+			std::cout << "int: impossible" << std::endl;
 		}
 	}
 }
@@ -100,7 +100,7 @@ void ScalarConverter::_toFloat(const std::string &str)
 		}
 		catch (const std::exception &e)
 		{
-			std::cout << "float: Impossible" << std::endl;
+			std::cout << "float: impossible" << std::endl;
 		}
 	}
 }
@@ -126,7 +126,7 @@ void ScalarConverter::_toDouble(const std::string &str)
 		}
 		catch (const std::exception &e)
 		{
-			std::cout << "double: Impossible" << std::endl;
+			std::cout << "double: impossible" << std::endl;
 		}
 	}
 }
