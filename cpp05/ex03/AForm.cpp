@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 14:21:55 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/17 15:45:09 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/18 15:39:17 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int AForm::getExeGrade() const { return this->_exeGrade; };
 
 void AForm::beSigned(const Bureaucrat &b)
 {
-	if (b.getGrade() < this->_signGrade)
+	if (b.getGrade() <= this->_signGrade)
 		this->_signed = true;
 	else
 		throw AForm::GradeTooLowException();	
