@@ -1,10 +1,4 @@
 #include "ScalarConverter.hpp"
-#include <iostream>
-#include <iomanip>
-#include <limits>
-#include <cmath>
-#include <cstdlib>
-#include <regex>
 
 void ScalarConverter::convert(const std::string &str)
 {
