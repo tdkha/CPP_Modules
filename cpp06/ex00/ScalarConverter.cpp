@@ -18,7 +18,7 @@ void ScalarConverter::convert(const std::string &str)
 
 bool ScalarConverter::_isValidNumber(const std::string &str)
 {
-    std::regex numberPattern("^[+-]?([0-9]*[.])?[0-9]+([fF]?)$");
+	std::regex numberPattern("^[+-]?[0-9]+([.][0-9]*[f]?)?$");
     return std::regex_match(str, numberPattern);
 }
 
@@ -56,7 +56,7 @@ void ScalarConverter::_toInt(const std::string &str)
 {
 	if (str.length() == 1 && !std::isdigit(str[0]))
 	{
-		int value = static_cast<int>(str[0]); // Convert character to ASCII value
+		int value = static_cast<int>(str[0]);
 		std::cout << "int: " << value << std::endl;
 	}
 	else
