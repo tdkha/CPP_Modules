@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 15:58:35 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/21 16:33:30 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/21 17:17:24 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int main(void)
 {
-	Base *random = generate();
+	Base *r = generate();
 	Base *a = new A();
 	Base *b = new B();
 	Base *c = new C();
@@ -26,7 +26,7 @@ int main(void)
 	std::cout << "-------------------------------" << std::endl;
 	std::cout << "Identify pointers" << std::endl;
 	std::cout << "-------------------------------" << std::endl;
-	identify(random);
+	identify(r);
 	identify(a);
 	identify(b);
 	identify(c);	
@@ -38,6 +38,7 @@ int main(void)
 	identify(*b);
 	identify(*c);
 
+	delete r;
 	delete a;
 	delete b;
 	delete c;
