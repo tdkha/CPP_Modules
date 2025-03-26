@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 14:27:55 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/26 16:26:13 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/26 17:41:02 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ template<typename T>
 Array<T>::Array(unsigned int n) : _array(new T[n]), _size(n) {};
 
 template<typename T>
-Array<T>::Array(const Array<T> &org) : _size(org._size), _array(new T[org._size])
+Array<T>::Array(const Array<T> &org) : _array(new T[org._size]), _size(org._size)
 {
 	for (unsigned int i = 0; i < _size; i++)
 	{

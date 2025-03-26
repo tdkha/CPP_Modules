@@ -6,7 +6,7 @@
 #    By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/26 13:15:39 by ktieu             #+#    #+#              #
-#    Updated: 2025/03/26 13:32:56 by ktieu            ###   ########.fr        #
+#    Updated: 2025/03/26 17:40:13 by ktieu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME=templates
 all: $(NAME)
 
 CPP := c++
-CFLAGS := -std=c++11
+CFLAGS := -std=c++11 -Wall -Wextra -Werror
 
 SOURCE := main.cpp
 
