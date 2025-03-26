@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 14:27:55 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/26 15:47:21 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/26 16:26:13 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ Array<T> &Array<T>::operator = (const Array<T> &org)
 template<typename T>
 T &Array<T>::operator [] (unsigned int i)
 {
-	if (i > _size)
+	if (i >= _size)
 	{
 		throw std::runtime_error("Error: Index out of range");
 	}
