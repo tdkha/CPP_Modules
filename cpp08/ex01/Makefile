@@ -6,18 +6,18 @@
 #    By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/26 13:15:39 by ktieu             #+#    #+#              #
-#    Updated: 2025/03/28 03:01:33 by ktieu            ###   ########.fr        #
+#    Updated: 2025/03/28 03:01:45 by ktieu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=easyfind
+NAME=span
 
 all: $(NAME)
 
 CPP := c++
 CFLAGS := -std=c++11 -Wall -Wextra -Werror
 
-SOURCE := main.cpp
+SOURCE := main.cpp Span.cpp
 
 OBJ := $(SOURCE:.cpp=.o)
 
