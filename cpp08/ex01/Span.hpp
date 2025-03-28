@@ -6,9 +6,11 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 03:01:57 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/28 14:45:13 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/28 15:01:49 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include <algorithm>
 #include <iostream>
