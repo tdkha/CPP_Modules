@@ -6,7 +6,7 @@
 /*   By: ktieu <ktieu@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 03:01:57 by ktieu             #+#    #+#             */
-/*   Updated: 2025/03/28 03:13:35 by ktieu            ###   ########.fr       */
+/*   Updated: 2025/03/28 14:45:13 by ktieu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <iostream>
 #include <stdexcept>
 #include <vector>
+#include <limits>
+#include <random>
 
 class Span
 {
@@ -31,6 +33,12 @@ class Span
 		unsigned int size();
 		std::vector<int>::iterator begin();
 		std::vector<int>::iterator end();
+		void resize(unsigned int n);
+		void print();
+		void fillRange(
+			std::vector<int>::iterator begin, 
+			std::vector<int>::iterator end
+		);
 
 		void addNumber(int num);
 		unsigned int shortestSpan();
